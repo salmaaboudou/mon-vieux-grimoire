@@ -24,11 +24,11 @@ app.use((req, res, next) => {
 // Middleware pour l'analyse du corps de la demande (parse le JSON)
 app.use(express.json());
 
-app.use('/api/stuff', stuffRoutes);
+// app.use('/api/books', booksRoutes);
 app.use('/api/auth', userRoutes);
 
-app.use((req, res) => {
-      res.json({ message: "Votre requête a bien été reçue !" });
-});
+// app.use((req, res) => {
+//       res.json({ message: "Votre requête a bien été reçue !" });
+// });
 
 module.exports = app;
