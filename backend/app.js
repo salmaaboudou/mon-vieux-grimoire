@@ -1,12 +1,13 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const path = require('path');
 const booksRoutes = require("./routes/books.routes");
-const userRoutes = require("./routes/user.routes");
+const usersRoutes = require("./routes/users.routes");
 
 // Connexion à la db
 mongoose
-      .connect("mongodb+srv://salmaaboudou:Skieswalker93..@grimoire.9f4xb9g.mongodb.net/?retryWrites=true&w=majorit", {
+      .connect("mongodb+srv://salmaaboudou:Skieswalker93..@grimoire.9f4xb9g.mongodb.net/?retryWrites=true&w=majority", {
             useNewUrlParser: true,
             useUnifiedTopology: true,
       })
@@ -24,11 +25,9 @@ app.use((req, res, next) => {
 // Middleware pour l'analyse du corps de la demande (parse le JSON)
 app.use(express.json());
 
-// app.use('/api/books', booksRoutes);
-app.use('/api/auth', userRoutes);
+app.use('/api/books', booksRoutes);
+app.use('/api/auth', usersRoutes);
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
-// app.use((req, res) => {
-//       res.json({ message: "Votre requête a bien été reçue !" });
-// });
 
 module.exports = app;
