@@ -3,10 +3,11 @@ const mongoose = require("mongoose");
 const path = require('path');
 const booksRoutes = require("./routes/books.routes");
 const usersRoutes = require("./routes/users.routes");
+require('dotenv').config();
 
 // Connexion à la db
 mongoose
-      .connect("mongodb+srv://salmaaboudou:Skieswalker93..@grimoire.9f4xb9g.mongodb.net/?retryWrites=true&w=majority", {
+      .connect(process.env.MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
       })
