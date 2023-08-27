@@ -44,8 +44,8 @@ Puis `git clone` le fichier backend également
 
 ### Lancer le frontend 
 
-Ouvrez un terminal puis `cd frontend`, faites la commande `npm install` pour installer les dépendances puis `npm start` pour lancer le client. Le frontend écoute sur `le port 3000``
+Ouvrez un terminal puis `cd frontend`, faites la commande `npm install` pour installer les dépendances puis `npm start` pour lancer le client. Le frontend écoute sur `le port 3000`
 
 ### Lancer le backend
 
-Ouvrez un terminal puis `cd backend`, faites la commande `npm install` pour installer les dépendances puis `nodemon` pour lancer le server.
+Ouvrez un terminal puis `cd backend`, faites la commande `npm install` pour installer les dépendances puis `nodemon npm start` pour lancer le server.
