@@ -2,7 +2,7 @@
 
 ### Projet 7 - Formation développeur web Openclassrooms
 
-Les librairies “Au Vieux Grimoire“ comptent de nombreux clientspassionnés. L’objectif du site “Mon Vieux Grimoire” est de donner la possibilité aux lecteurs de créer des livres, de les noter et de consulter les livres existants ainsi que leurs note
+Les librairies “Au Vieux Grimoire“ comptent de nombreux clients passionnés. L’objectif du site “Mon Vieux Grimoire” est de donner la possibilité aux lecteurs de créer des livres, de les noter et de consulter les livres existants ainsi que leurs note
 
 ## Technologies utilisées
 
