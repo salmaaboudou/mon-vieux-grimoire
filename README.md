@@ -21,7 +21,7 @@ Les librairies “Au Vieux Grimoire“ comptent de nombreux clients passionnés.
 - Création d'un serveur express simple.
 - Création d'une API RESTful.
 - Configuration des models Book et User.
-- Création du routes CRUD 
+- Création d'un routeur basée sur le modèle CRUD 
 - Mise en plase d'un système d'authentification par Token(jwt).
 - Hachage du mot de passe avec bcrypt.
 - Mise en place d'une gestion des fichiers utilisateur via Sharp et Multer.
@@ -29,9 +29,11 @@ Les librairies “Au Vieux Grimoire“ comptent de nombreux clients passionnés.
 
 ## Comment lancer le projet ?
 
-### Cloner le front
+### Cloner le frontend puis cloner le backend
 
 Ouvrez un terminal puis `git clone https://github.com/JonathanCornic/mon-vieux-grimoire.git`
+
+Puis `git clone` le fichier backend également
 
 ### Créez un fichier .env à la racine du projet avec en parametres 
 
