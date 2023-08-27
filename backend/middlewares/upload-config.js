@@ -9,7 +9,7 @@ const MIME_TYPES = {
       "image/png": "png",
 };
 
-// Configuration
+// Configuration Multer
 const storage = multer.diskStorage({
       destination: (req, file, callback) => {
             callback(null, "images");
@@ -26,7 +26,9 @@ const storage = multer.diskStorage({
 // Gérer téléchargement d'une seule image par multer
 module.exports = multer({ storage: storage }).single("image");
 
-// Redimensionnement des images pour GREEN code
+
+
+// Optimisation des images 
 module.exports.resizeImage = (req, res, next) => {
       // On vérifie si un fichier a été téléchargé
       if (!req.file) {
@@ -39,7 +41,8 @@ module.exports.resizeImage = (req, res, next) => {
 
       sharp(filePath)
             .resize({ width: 358, height: 572 })
-            
+            .jpeg({ quality: 80 })
+            .png({ compressionLevel: 6 })
             .toFile(outputFilePath)
             .then(() => {
                   // Remplacer le fichier original par le fichier redimensionné
